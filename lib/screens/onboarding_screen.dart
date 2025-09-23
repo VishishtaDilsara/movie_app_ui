@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/screens/auth_screen.dart';
 import 'package:movie_app/utils/custom_colors.dart';
 
 class OnboardingScreen extends StatefulWidget {
@@ -66,7 +67,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               ),
               SizedBox(height: 15),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AuthScreen()),
+                  );
+                },
                 icon: Icon(Icons.arrow_forward_ios_rounded),
                 color: Colors.white,
                 style: ButtonStyle(
