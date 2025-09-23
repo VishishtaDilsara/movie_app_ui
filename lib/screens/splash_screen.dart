@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
+import 'package:movie_app/screens/onboarding_screen.dart';
 import 'package:movie_app/utils/custom_colors.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -13,6 +16,12 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     super.initState();
+    Timer(Duration(seconds: 3), () {
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => OnboardingScreen()),
+      );
+    });
   }
 
   @override
