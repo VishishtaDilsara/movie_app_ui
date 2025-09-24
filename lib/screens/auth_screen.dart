@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_app/screens/home_page.dart';
 import 'package:movie_app/utils/custom_colors.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -132,17 +133,25 @@ class _AuthScreenState extends State<AuthScreen> {
                   ],
                 ),
                 SizedBox(height: 40),
-                Container(
-                  width: size.width,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    color: CustomColors.primaryColor,
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'Login',
-                      style: TextStyle(color: Colors.white, fontSize: 18),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePage()),
+                    );
+                  },
+                  child: Container(
+                    width: size.width,
+                    height: 60,
+                    decoration: BoxDecoration(
+                      color: CustomColors.primaryColor,
+                      borderRadius: BorderRadius.circular(15),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'Login',
+                        style: TextStyle(color: Colors.white, fontSize: 18),
+                      ),
                     ),
                   ),
                 ),
